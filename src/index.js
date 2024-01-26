@@ -4,7 +4,7 @@ const { books } = require('../data/library');
 const fantasyOrScienceFiction = () => books
   .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
   .sort();
-
+console.log(fantasyOrScienceFiction);
 // Requisito 2
 const oldBooksOrdered = (year) =>
   books
@@ -22,9 +22,9 @@ const booksByAuthorBirthYear = (birthYear) => {
 };
 
 // Requisito 4
-const fantasyOrScienceFictionAuthors = () => {
-  // escreva seu código aqui
-};
+const fantasyOrScienceFictionAuthors = () => books
+  .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+  .map((book) => book.author.name).sort();
 
 // Requisito 5
 const oldBooks = (year) => {
