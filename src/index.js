@@ -1,9 +1,9 @@
 const { books } = require('../data/library');
 
 // Requisito 1
-const fantasyOrScienceFiction = () => {
-  // escreva seu código aquif
-};
+const fantasyOrScienceFiction = () => books
+  .filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+  .sort();
 
 // Requisito 2
 const oldBooksOrdered = (year) => {
