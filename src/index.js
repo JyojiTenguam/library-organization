@@ -14,7 +14,11 @@ const oldBooksOrdered = (year) =>
 
 // Requisito 3
 const booksByAuthorBirthYear = (birthYear) => {
-  // escreva seu código aqui
+  const lastYear = new Date().getFullYear() - 1;
+
+  return books
+    .filter((book) => book.author.birthYear === birthYear && book.author.birthYear <= lastYear)
+    .map((book) => book.name);
 };
 
 // Requisito 4
