@@ -27,14 +27,13 @@ const fantasyOrScienceFictionAuthors = () => books
   .map((book) => book.author.name).sort();
 
 // Requisito 5
-const oldBooks = (year) => {
-  // escreva seu código aqui
-};
+const oldBooks = (year) =>
+  books
+    .filter((book) => (year - book.releaseYear) > 60)
+    .map((book) => book.name);
 
 // Requisito 6
-const authorWith3DotsOnName = () => {
-  // escreva seu código aqui
-};
+const authorWith3DotsOnName = () => { };
 
 module.exports = {
   fantasyOrScienceFiction,
