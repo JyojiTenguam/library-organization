@@ -33,7 +33,10 @@ const oldBooks = (year) =>
     .map((book) => book.name);
 
 // Requisito 6
-const authorWith3DotsOnName = () => { };
+const authorWith3DotsOnName = () => {
+  const author = books.find((book) => /^([A-Z]\.\s){2}[A-Z]/.test(book.author.name));
+  return author ? author.name : null;
+};
 
 module.exports = {
   fantasyOrScienceFiction,
